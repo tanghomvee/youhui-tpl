@@ -1,0 +1,329 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption, {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    color: #333;
+    font-weight: normal;
+    font-family: "Microsoft Yahei";
+    box-sizing: border-box;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-font-smoothing: antialiased;
+    &:hover{
+        outline: none;
+    }
+}
+//color
+$textDefault: #333333;
+$textLight  : #a6a6a6;
+$lineGray   : #e0e0e0;
+
+$white      : #ffffff;
+$orange     : #f97d00;
+$orangeLight: #ff9329;
+$blue       : #2e9fe5;
+$blueLight  : #52b5f3;
+$gray       : #d8d8d8;
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 0px;  
+    height: 0px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
+    border-radius: 10px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #555;  
+}  
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea { -webkit-appearance: none;}   
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear{
+    zoom:1;
+}
+
+.back_img{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.margin{
+    margin: 0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cwj_ellipsis_2 {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    /* Opera 9-10 */
+    text-overflow: ellipsis;
+    /* IE, WebKit (Safari, Chrome), Firefox 7, Opera 11 */
+}
+
+.cwj_ellipsis_3 {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    /* Opera 9-10 */
+    text-overflow: ellipsis;
+    /* IE, WebKit (Safari, Chrome), Firefox 7, Opera 11 */
+}
+
+.cwj_row { 
+    /*background-color: red;*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.cwj_row_v {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+}
+
+/*撑满剩余空间*/
+.cwj_flex {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.cwj_center_v {
+    /*子元素竖直居中和cwj_row一起用*/
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cwj_center_h {
+    /*子元素水平居中和cwj_row一起用*/
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.paddingTop{
+    padding-top: 1.95rem;
+}
+
+.h_line{
+    background-color: rgb(238,238,238);
+    height: 1px;
+    margin: 0px 10px;
+}
+
+.cwj_circle {
+    height: 12px;
+    width: 12px;
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 50%;
+}
+
+.bottonActive:active {
+    /* older safari/Chrome browsers */
+    -webkit-opacity: 0.5;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0.5;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0.5;
+    /* IE9 + etc...modern browsers */
+    opacity: .5;
+    /* IE 4-9 */
+    filter: alpha(opacity=50);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /*IE4-IE9*/
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+
+@keyframes backOpacity{
+   0%   { opacity: 1 }
+   25%  { opacity: .5 }
+   50%  { opacity: 1 }
+   75%  { opacity: .5 }
+   100% { opacity: 1 }
+}
+
+.animation_opactiy{
+    animation: backOpacity 2s ease-in-out infinite;
+}
+
+
+
+//base
+$phone:750;
+$remBase:$phone/20;
+//font-size
+@function torem($size) {
+  $remSize: $size / $remBase;
+  @return $remSize * 1rem;
+}
+
+//ellipsis
+@mixin ellipsis(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//flexbox
+@mixin flexbox(){
+    //OLD - iOS 6-, Safari 3.1-6 
+    display: -webkit-box;
+    //NEW - Chrome
+    display: -webkit-flex;
+    display: flex;
+}
+//flex
+@mixin flex($per){
+    -webkit-box-flex:$per;
+    -webkit-flex:$per;
+    flex:$per;
+    //下面3个属性是为了兼容安卓4.3
+    display:block;
+    width:0%;
+    overflow:hidden;
+}
+//arrow
+@mixin arrow($deg){
+    content: '';
+    display:inline-block;
+    margin-top:torem(-5);
+    width:torem(10);
+    height:torem(10);
+    border-right:1px solid #C7C7C7;
+    border-top:1px solid #C7C7C7;
+    @include transform(rotate($deg));
+}
+//center
+@mixin center(){
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-box;
+    display:-o-box;
+    display:box;
+    -webkit-box-pack: center;
+    box-pack:center;
+    -webkit-box-align:center;
+    box-align:center;
+}
+// border-bottom
+@mixin borderBottom(){
+    &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $lineGray;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        @include transform(scaleY(0.5));
+    }
+}
+//keyframes
+@mixin keyframes($animateName){
+    @-webkit-keyframes #{$animateName}
+    {
+        @content;
+    }
+    @keyframes #{$animateName}
+    {
+        @content;
+    }
+}
+//animation
+@mixin animation($str) {
+    animation: $str;
+    -webkit-animation: $str;
+    // -moz-animation: $str;
+    // -ms-animation: $str;
+    // -o-animation: $str;
+}
+//transition
+@mixin transition($transition){
+    transition:$transition;
+    -webkit-transition:$transition;
+    // -moz-transition:$transition;
+    // -ms-transition:$transition;
+    // -o-transition:$transition;
+}
+//transform
+@mixin transform($transition){
+    transform:$transition;
+    -webkit-transform:$transition;
+    // -moz-transform:$transition;
+    // -ms-transform:$transition;
+    // -o-transform:$transition;
+}
+
+

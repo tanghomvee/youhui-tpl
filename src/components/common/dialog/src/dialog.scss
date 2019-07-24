@@ -1,0 +1,78 @@
+@import "../../../../style/common";
+.iv-toast {
+    padding: torem(12);
+    font-size: torem(20);
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 4px;
+    text-align: center;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    @include transform(translate3d(-50%, -50%, 0));
+    @include animation(fadeInOut 1.5s forwards);
+}
+
+
+
+$prefixCls: '.iv-dialog';
+
+
+#{$prefixCls} {
+    position: fixed;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: #FAFAFC;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: .2s;
+
+    &-header {
+        padding: torem(10);
+        height: torem(60);
+        font-size: torem(22);
+    }
+
+    &-content {
+        font-size: torem(18);
+        height:4rem;
+        color: #666;
+        text-align: center;
+        padding: torem(5) torem(10) torem(10) torem(10);
+    }
+
+    &-footer {
+        position: relative;
+        line-height: torem(50);
+        margin-top: torem(10);
+        border-top: 1px solid #f0f0f0;
+        @include flexbox();
+
+        button {
+            width: 100%;
+            height: torem(50);
+            font-size: torem(18);
+            background: #fff;
+            @include flex(1);
+
+            &.confirm {
+                color: #f60;
+            }
+
+            &.cancle {
+                color: #9c9c9c;
+                border-left: 1px solid #f0f0f0;
+            }
+        }
+    }
+}
+
+
+#{$prefixCls}-scale-out-enter {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(1.5);
+}
